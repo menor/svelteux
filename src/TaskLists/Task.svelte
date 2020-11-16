@@ -9,7 +9,7 @@
   // [link](http://url)
   // url <http://teuxdeux.com>
 
-  import type { ITask } from "./Tasks.types";
+  import type { ITask } from "./TaskList.types";
 
   export let task: ITask;
   let isEditing = false;

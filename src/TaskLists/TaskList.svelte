@@ -2,7 +2,7 @@
 
 	import { createEventDispatcher } from 'svelte';
 
-  import type { ITaskList } from "./Tasks.types";
+  import type { ITaskList } from "./TaskList.types";
   import Task from "./Task.svelte";
   import { onMount } from "svelte";
 
@@ -97,7 +97,7 @@
 
 <article>
   <div class="todo__actions">
-    <button on:click={() => dispatch('delete', list.id)} class="todo__actions-button">
+    <button on:click={() => dispatch('delete', {id: list.id})} class="todo__actions-button">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <title>Delete Me</title>
         <use xlink:href="#delete-icon" /></svg>

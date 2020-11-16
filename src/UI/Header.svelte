@@ -17,5 +17,5 @@
     }
 </style>
 <header>
-   <h1>Teux Deux</h1>
+   <h1>Teux Svelteux</h1>
 </header>
