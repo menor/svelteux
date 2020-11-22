@@ -4,7 +4,9 @@
 
   import type { ITaskList } from "./TaskList.types";
   import Task from "./Task.svelte";
+  
   import { onMount } from "svelte";
+  import taskLists from "./taskLists-store";
 
   export let list: ITaskList;
   let isEditingTitle = false;
@@ -120,6 +122,8 @@
       <li>
         <Task {task} />
       </li>
+      {:else}
+      <p>Loading ...</p>
     {/each}
   </ol>
   <input bind:value={currentItem} type="text" />

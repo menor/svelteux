@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { updateLocalStorage } from './utils/localStorage'
   import Header from "./UI/Header.svelte";
   import ListsSection from "./UI/ListsSection.svelte";
   import taskLists from "./TaskLists/taskLists-store";
