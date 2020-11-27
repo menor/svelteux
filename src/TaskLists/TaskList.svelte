@@ -1,10 +1,9 @@
 <script lang="ts">
-
-	import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher } from "svelte";
 
   import type { ITaskList } from "./TaskList.types";
   import Task from "./Task.svelte";
-  
+
   import { onMount } from "svelte";
   import taskLists from "./taskLists-store";
 
@@ -90,6 +89,19 @@
     background-color: var(--secondary-background-accent);
   }
 
+  ol {
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 22px,
+      var(--list-border-color) 22px,
+      var(--list-border-color) 23.23px,
+      transparent 23.23px,
+      transparent 25px
+    );
+    height: 100%;
+    padding-bottom: 2.6411111111rem;
+  }
+
   @media (min-width: 48rem) {
     article {
       width: 12rem;
@@ -99,7 +111,9 @@
 
 <article>
   <div class="todo__actions">
-    <button on:click={() => dispatch('delete', {id: list.id})} class="todo__actions-button">
+    <button
+      on:click={() => dispatch('delete', { id: list.id })}
+      class="todo__actions-button">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <title>Delete Me</title>
         <use xlink:href="#delete-icon" /></svg>
@@ -122,8 +136,6 @@
       <li>
         <Task {task} />
       </li>
-      {:else}
-      <p>Loading ...</p>
     {/each}
   </ol>
   <input bind:value={currentItem} type="text" />
