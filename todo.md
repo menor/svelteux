@@ -1,0 +1,8 @@
+- [ ] Remove Loading...
+- [ ] Style new task input 
+- [ ] Lines for new tasks
+- [ ] Rename a task
+- [ ] Delete a task
+- [ ] Drag a task
+- [ ] Day lists
+- [ ] Uncompleted tasks from yesterday get passed to today
